@@ -1,0 +1,2 @@
+// GET /api/lend/markets -> Data semua aset yang bisa disetor/pinjam (APY, dll)
+// GET /api/lend/account -> Data akun pengguna yang login (total simpanan, total pinjaman, health factor, bonus reputasi)

@@ -1,0 +1,31 @@
+{
+  "name": "kaialink-backend",
+  "version": "1.0.0",
+  "description": "Backend server untuk KaiaLink DeFi Mini dApp",
+  "main": "src/server.js",
+  "type": "module", // Penting! Agar bisa menggunakan syntax import/export
+  "author": "Tim Anda",
+  "license": "ISC",
+  "scripts": {
+    "start": "node src/server.js", // Perintah untuk menjalankan di mode produksi
+    "dev": "nodemon src/server.js", // Perintah untuk development, server akan auto-restart jika ada perubahan
+    "lint": "eslint .", // Perintah untuk cek kualitas kode
+    "lint:fix": "eslint . --fix" // Perintah untuk memperbaiki error kualitas kode secara otomatis
+  },
+  "dependencies": {
+    "axios": "^1.7.2", // Untuk membuat request ke API eksternal (The Graph, Moralis)
+    "cors": "^2.8.5", // Middleware untuk mengizinkan request dari frontend (LINE Mini dApp)
+    "dotenv": "^16.4.5", // Untuk memuat variabel dari file .env
+    "ethers": "^6.13.1", // Library utama untuk semua interaksi dengan blockchain Kaia (signing, contract calls)
+    "express": "^4.19.2", // Framework utama untuk membangun server dan API
+    "helmet": "^7.1.0", // Untuk mengamankan aplikasi Express dengan berbagai header HTTP
+    "jsonwebtoken": "^9.0.2", // (Opsional tapi direkomendasikan) Untuk otentikasi pengguna
+    "mongoose": "^8.4.4", // Untuk berinteraksi dengan database MongoDB
+    "node-cron": "^3.0.3" // Untuk menjadwalkeun CRON jobs (kalkulasi reputasi & AI)
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0", // Linter untuk menjaga kualitas dan konsistensi kode
+    "nodemon": "^3.1.4", // Tools untuk auto-restart server saat development
+    "prettier": "^3.3.2" // (Opsional) Untuk merapikan format kode secara otomatis
+  }
+}
